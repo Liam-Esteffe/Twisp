@@ -1,1 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Kumbh+Sans:wght@100..900&family=Pirata+One&display=swap');
+
+.title {
+    font-family: "Cherry Bomb One", system-ui;
+}
 /* You can add global styles to this file, and also import other style files */
