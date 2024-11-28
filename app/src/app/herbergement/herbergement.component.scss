@@ -1,0 +1,28 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.fade-in-left {
+    animation: fadeIn 1s ease-in-out;
+    transform-origin: left;
+}
+
+.fade-in-right {
+    animation: fadeIn 1s ease-in-out;
+    transform-origin: right;
+}
+
+.fade-in-up {
+    animation: fadeIn 1s ease-in-out;
+}

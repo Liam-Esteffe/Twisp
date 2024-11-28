@@ -1,0 +1,32 @@
+<div class="bg-black text-gray-100 font-sans h-screen flex flex-col items-center justify-center relative">
+    <!-- Background animations -->
+    <div class="absolute inset-0">
+        <div class="absolute top-10 left-10 bg-gradient-to-r from-yellow-500 via-orange-400 to-red-500 h-32 w-32 rounded-full opacity-50 blur-2xl animate-pulse"></div>
+        <div class="absolute bottom-16 right-16 bg-gradient-to-r from-blue-500 to-purple-600 h-40 w-40 rounded-full opacity-40 blur-3xl animate-bounce"></div>
+        <div class="absolute bottom-0 left-0 bg-gradient-to-r from-red-400 via-orange-500 to-yellow-500 h-48 w-48 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+    </div>
+
+    <!-- Main content -->
+    <section class="text-center relative z-10">
+        <h1 class="text-4xl lg:text-6xl font-extrabold mb-6">
+            <span class="bg-gradient-to-r from-yellow-500 via-orange-400 to-red-500 text-transparent bg-clip-text">
+                Page en travaux
+            </span>
+        </h1>
+        <p class="text-gray-300 text-lg mb-8">
+            Nous travaillons activement pour vous offrir une expérience exceptionnelle. <br>
+            Revenez bientôt pour découvrir cette nouvelle page !
+        </p>
+
+        <!-- Illustration -->
+        <div class="flex justify-center mb-8">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/work-in-progress-illustration-download-svg-png-gif-file-formats--under-construction-site-warning-pack-tools-equipment-illustrations-3518823.png" 
+                 alt="Page en travaux" class="w-48 lg:w-64 mx-auto animate-fadeIn">
+        </div>
+
+        <!-- Button -->
+        <a routerLink="/home" class="bg-gradient-to-r from-yellow-500 via-orange-400 to-red-500 text-white px-6 py-3 rounded-full hover:bg-orange-500 transition duration-300">
+            Retour à l'accueil
+        </a>
+    </section>
+</div>

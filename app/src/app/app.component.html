@@ -1,1 +1,103 @@
+
+<header class="bg-black shadow-sm z-10">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo -->
+        <div routerLink="/home" class="flex items-center space-x-2 cursor-pointer">
+            <img src="../../assets/logo/logo.png" alt="Logo" class="w-8 h-8">
+            <h1 class="text-xl sm:text-2xl font-bold text-gray-100">Twisp</h1>
+        </div>
+
+        <!-- Hamburger menu (visible sur mobile) -->
+        <div class="lg:hidden">
+            <button id="mobile-menu-toggle" class="text-gray-100 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation (desktop and mobile hidden by default) -->
+        <nav id="mobile-menu" class="hidden lg:flex space-x-6 text-gray-200">
+            <a routerLink="/home" class="hover:text-gray-100">Accueil</a>
+            <a routerLink="/website" class="hover:text-gray-100">Logicel & Sites Internet</a>
+            <a routerLink="/wyps"  class="hover:text-gray-100">SEO & Référencement</a>
+            <a routerLink="/wyps" class="hover:text-gray-100">Wyps</a>
+            <a routerLink="/server" class="hover:text-gray-100">Serveur & Hébergement</a>
+        </nav>
+
+        <!-- Instagram Icon -->
+        <div class="hidden lg:flex space-x-4">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram"
+                    class="h-8 w-8 hover:opacity-80 transition duration-300">
+            </a>
+        </div>
+    </div>
+
+    <!-- Background gradients -->
+    <div class="absolute bottom-0 right-0 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full h-40 sm:h-72 w-40 sm:w-72 opacity-30 blur-3xl"></div>
+    <div class="absolute top-1/4 left-1/3 bg-gradient-to-r from-orange-400 to-blue-400 rounded-full h-32 sm:h-64 w-32 sm:w-64 opacity-10 blur-2xl"></div>
+    <div class="absolute top-20 left-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full h-48 sm:h-96 w-48 sm:w-96 opacity-20 blur-3xl"></div>
+</header>
+
 <router-outlet></router-outlet>
+
+<footer class="bg-black text-gray-300 py-12">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Logo et description -->
+        <div>
+            <div class="flex items-center mb-4">
+                <img src="../../assets/logo/logo.png" alt="Logo" class="w-10 h-10">
+                <h1 class="text-2xl font-bold text-gray-100 ml-2">Twisp</h1>
+            </div>
+            <p class="text-sm">
+                Nous créons des solutions innovantes pour les entreprises modernes. Contactez-nous pour transformer vos idées en réalité.
+            </p>
+        </div>
+
+        <!-- Navigation rapide -->
+        <div>
+            <h3 class="text-xl font-semibold text-gray-100 mb-4">Navigation</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-yellow-400 transition">Accueil</a></li>
+                <li><a href="#" class="hover:text-yellow-400 transition">Services</a></li>
+                <li><a href="#" class="hover:text-yellow-400 transition">Projets</a></li>
+                <li><a href="#" class="hover:text-yellow-400 transition">À propos</a></li>
+                <li><a href="#" class="hover:text-yellow-400 transition">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 class="text-xl font-semibold text-gray-100 mb-4">Contactez-nous</h3>
+            <ul class="space-y-2">
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17v-5a4 4 0 00-8 0v5M12 2a7 7 0 017 7v5h-4l-1 2H9l-1-2H4V9a7 7 0 017-7z" />
+                    </svg>
+                    <span>contacttwisp.com</span>
+                </li>
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657A8 8 0 016.343 7.343M4.243 12.243a8 8 0 0111.314-11.314" />
+                    </svg>
+                    <span>+33 1 23 45 67 89</span>
+                </li>
+                <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m4 0a4 4 0 00-4-4V5a1 1 0 00-1-1H7a1 1 0 00-1 1v1a4 4 0 00-4 4v1a4 4 0 004 4v1a1 1 0 001 1h4a1 1 0 001-1v-1a4 4 0 004-4v-1a4 4 0 00-4-4z" />
+                    </svg>
+                    <span>12 rue des solutions, Paris</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Ligne de séparation -->
+    <div class="mt-8 border-t border-gray-700"></div>
+
+    <!-- Copyright -->
+    <div class="mt-4 text-center text-sm">
+        <p>© 2024 Twisp. Tous droits réservés.</p>
+    </div>
+</footer>
