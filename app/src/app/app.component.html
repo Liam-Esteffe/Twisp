@@ -1,5 +1,4 @@
-
-<header class="bg-black shadow-sm z-10">
+<header class="bg-black shadow-sm z-50 relative">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <!-- Logo -->
         <div routerLink="/home" class="flex items-center space-x-2 cursor-pointer">
@@ -7,20 +6,64 @@
             <h1 class="text-xl sm:text-2xl font-bold text-gray-100">Twisp</h1>
         </div>
 
-        <!-- Hamburger menu (visible sur mobile) -->
+        <!-- Hamburger menu avec checkbox caché -->
         <div class="lg:hidden">
-            <button id="mobile-menu-toggle" class="text-gray-100 focus:outline-none">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+            <label for="menu-toggle" class="text-gray-100 cursor-pointer p-2 border border-gray-600 rounded block">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
-            </button>
+            </label>
+
+            <!-- Menu mobile -->
+            <div class="fixed top-0 left-0 w-64 h-full bg-black transform -translate-x-full 
+                        transition-transform duration-300 ease-in-out lg:hidden z-50
+                        peer-checked:translate-x-0">
+                <div class="p-6">
+                    <!-- Bouton fermeture -->
+                    <label for="menu-toggle" class="absolute top-4 right-4 text-gray-100 cursor-pointer">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </label>
+
+                    <!-- Logo dans le menu -->
+                    <div class="flex items-center space-x-2 mb-8">
+                        <img src="../../assets/logo/logo.png" alt="Logo" class="w-8 h-8">
+                        <h1 class="text-xl font-bold text-gray-100">Twisp</h1>
+                    </div>
+
+                    <!-- Liens de navigation -->
+                    <nav class="flex flex-col space-y-4">
+                        <a routerLink="/home" class="text-gray-200 hover:text-white transition-colors duration-200">
+                            <label for="menu-toggle">Accueil</label>
+                        </a>
+                        <a routerLink="/website" class="text-gray-200 hover:text-white transition-colors duration-200">
+                            <label for="menu-toggle">Logicel & Sites Internet</label>
+                        </a>
+                        <a routerLink="/seo" class="text-gray-200 hover:text-white transition-colors duration-200">
+                            <label for="menu-toggle">SEO & Référencement</label>
+                        </a>
+                        <a routerLink="/wyps" class="text-gray-200 hover:text-white transition-colors duration-200">
+                            <label for="menu-toggle">Wyps</label>
+                        </a>
+                        <a routerLink="/server" class="text-gray-200 hover:text-white transition-colors duration-200">
+                            <label for="menu-toggle">Serveur & Hébergement</label>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Overlay -->
+            <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity hidden 
+                        peer-checked:block lg:hidden z-40"></div>
         </div>
 
-        <!-- Navigation (desktop and mobile hidden by default) -->
-        <nav id="mobile-menu" class="hidden lg:flex space-x-6 text-gray-200">
+        <!-- Navigation desktop -->
+        <nav class="hidden lg:flex space-x-6 text-gray-200">
             <a routerLink="/home" class="hover:text-gray-100">Accueil</a>
             <a routerLink="/website" class="hover:text-gray-100">Logicel & Sites Internet</a>
-            <a routerLink="/seo"  class="hover:text-gray-100">SEO & Référencement</a>
+            <a routerLink="/seo" class="hover:text-gray-100">SEO & Référencement</a>
             <a routerLink="/wyps" class="hover:text-gray-100">Wyps</a>
             <a routerLink="/server" class="hover:text-gray-100">Serveur & Hébergement</a>
         </nav>
@@ -28,16 +71,11 @@
         <!-- Instagram Icon -->
         <div class="hidden lg:flex space-x-4">
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram"
-                    class="h-8 w-8 hover:opacity-80 transition duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" 
+                     alt="Instagram" class="h-8 w-8 hover:opacity-80 transition duration-300">
             </a>
         </div>
     </div>
-
-    <!-- Background gradients -->
-    <div class="absolute bottom-0 right-0 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full h-40 sm:h-72 w-40 sm:w-72 opacity-30 blur-3xl"></div>
-    <div class="absolute top-1/4 left-1/3 bg-gradient-to-r from-orange-400 to-blue-400 rounded-full h-32 sm:h-64 w-32 sm:w-64 opacity-10 blur-2xl"></div>
-    <div class="absolute top-20 left-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full h-48 sm:h-96 w-48 sm:w-96 opacity-20 blur-3xl"></div>
 </header>
 
 <router-outlet></router-outlet>
