@@ -7,6 +7,7 @@ import { SandboxComponent } from './sandbox/sandbox.component';
 import { WebsiteComponent } from './website/website.component';
 import { HerbergementComponent } from './herbergement/herbergement.component';
 import { WypsComponent } from './wyps/wyps.component';
+import { SeoComponent } from './seo/seo.component';
 
 export const routes: Routes = [
   // Route par défaut qui pointe vers AppComponent
@@ -17,6 +18,8 @@ export const routes: Routes = [
   { path: 'website', title:"Sites & Logiciel" ,component: WebsiteComponent },
 
   { path: 'wyps', title:"Wyps" ,component: WypsComponent },
+
+  { path: 'seo', title:"Seo & Référencement" ,component: SeoComponent },
 
   { path: 'server', title:"Serveur & Hébergement" ,component: HerbergementComponent },
 
